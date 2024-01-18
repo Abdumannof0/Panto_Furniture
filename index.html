@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Panto</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./scss/main.css" />
     <script src="./js/index.js" defer></script>
   </head>
   <body>
     <header class="header">
       <div class="container">
-        <nav class="nav">
-          <a href="!#" class="logo">Panto</a>
+        <nav class="header_nav nav">
+          <a href="!#" class="nav_logo">Panto</a>
           <!-- ! -->
           <ul class="nav_list">
             <li class="nav_list_item">
@@ -28,11 +28,33 @@
             </li>
           </ul>
           <!-- ! -->
-          <a href="#!">
-            <img class="cart_img" src="./icons/basket_icon.svg alt="Cart!" />
+          <a href="#!" class="cart">
+            <img class="cart_img" src="./icons/basket_icon.svg" alt="Cart!" />
             <div class="cart_count">0</div>
           </a>
         </nav>
+        <!-- ! NAVIGATION -->
+        <div class="header_content">
+          <h1 class="header_title">
+            Make your interior more minimalistic & modern
+          </h1>
+          <p class="header_text">
+            Turn your room with panto into a lot more minimalist and modern with
+            ease and speed
+          </p>
+          <!-- ! SEARCH BLOCK -->
+          <form action="" class="header_search search_form">
+            <input
+              type="text"
+              class="search_form_input"
+              placeholder="Search furniture"
+              autocomplete="off"
+            />
+            <button class="search_form_btn">
+              <img src="./icons/akar-icons_search.svg" alt="Search" />
+            </button>
+          </form>
+        </div>
       </div>
     </header>
   </body>
