@@ -11,6 +11,10 @@ body .container {
   padding: 0 15px;
   margin: 0 auto;
 }
+html .none,
+body .none {
+  display: none !important;
+}
 
 /* Reset and base styles  */
 * {
@@ -141,6 +145,7 @@ legend {
 }
 
 .header {
+  position: relative;
   background-color: var(--footer-bg);
   background-image: url("../../../products/Rectangle 1441.jpg");
   background-size: cover;
@@ -180,6 +185,30 @@ legend {
 }
 .header .header_content .header_search {
   margin: 45px auto 0;
+}
+.header .header_dot_sofa {
+  position: absolute;
+  left: 20.5555555556%;
+  top: 63.1918819188%;
+  transform: translate(0%, 0%);
+}
+.header .header_dot_vase {
+  position: absolute;
+  left: 8.085106383%;
+  top: 70.7981220657%;
+  transform: translate(-50%, -50%);
+}
+.header .header_dot_item {
+  position: absolute;
+  left: 56.25%;
+  top: 73.896713615%;
+  transform: translate(-50%, -50%);
+}
+.header .header_dot_wall {
+  position: absolute;
+  top: 77.0892018779%;
+  right: 3.1944444444%;
+  transform: translate(30%, -30%);
 }
 
 .nav {
@@ -257,4 +286,107 @@ legend {
   height: 40px;
   border-radius: 24px;
   background: var(--accent);
+}
+
+.header_dot_sofa .info_dot,
+.header_dot_vase .info_dot,
+.header_dot_item .info_dot,
+.header_dot_wall .info_dot {
+  position: relative;
+  cursor: pointer;
+}
+.header_dot_sofa .info_dot:hover .info_dot_circle,
+.header_dot_vase .info_dot:hover .info_dot_circle,
+.header_dot_item .info_dot:hover .info_dot_circle,
+.header_dot_wall .info_dot:hover .info_dot_circle {
+  background-color: var(--accent);
+}
+.header_dot_sofa .info_dot:hover .info_dot_readius,
+.header_dot_vase .info_dot:hover .info_dot_readius,
+.header_dot_item .info_dot:hover .info_dot_readius,
+.header_dot_wall .info_dot:hover .info_dot_readius {
+  animation: pluse 1s infinite alternate paused;
+}
+.header_dot_sofa .info_dot_circle,
+.header_dot_vase .info_dot_circle,
+.header_dot_item .info_dot_circle,
+.header_dot_wall .info_dot_circle {
+  position: absolute;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.4s ease-in-out;
+}
+.header_dot_sofa .info_dot_readius,
+.header_dot_vase .info_dot_readius,
+.header_dot_item .info_dot_readius,
+.header_dot_wall .info_dot_readius {
+  width: 32px;
+  height: 32px;
+  border: 0.86px solid #fff;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  animation: pluse 1s infinite alternate;
+}
+@keyframes pluse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+.info_hint {
+  position: absolute;
+  top: -200%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  display: flex;
+  justify-content: center;
+  padding: 12px 0 0;
+  gap: 8px;
+  width: 112px;
+  height: 56px;
+  background-image: url("../../../images/tooltip.svg");
+}
+.info_hint .info_hint_radio {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+.info_hint .info_hint_radio:checked + .info_hint_radio_fake {
+  background-image: url("../../../icons/check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.info_hint .info_hint_radio_fake {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: gray;
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.1));
+}
+.info_hint .info_hint_radio_fake__orange {
+  background: var(--ui-orange);
+}
+.info_hint .info_hint_radio_fake__beruza {
+  background: var(--ui-beruza);
+}
+.info_hint .info_hint_radio_fake__gray {
+  background: var(--ui-gray);
 }/*# sourceMappingURL=main.css.map */
