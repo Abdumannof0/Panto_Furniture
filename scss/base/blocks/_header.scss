@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   background-color: var(--footer-bg);
   background-image: url("../../../products/Rectangle 1441.jpg");
   background-size: cover;
@@ -37,5 +38,38 @@
     .header_search {
       margin: 45px auto 0;
     }
+  }
+
+  // Dots
+
+  .header_dot_sofa {
+    position: absolute;
+    left: calc(296 * 100% / 1440);
+    top: calc(685 * 100% / 1084);
+
+    transform: translate(0%, 0%);
+  }
+  .header_dot_vase {
+    position: absolute;
+    left: calc(114 * 100% / 1410);
+    top: calc(754 * 100% / 1065);
+
+    transform: translate(-50%, -50%);
+  }
+  .header_dot_item {
+    position: absolute;
+    left: calc(810 * 100% / 1440);
+    top: calc(787 * 100% / 1065);
+
+    
+    transform: translate(-50%, -50%);
+  }
+  .header_dot_wall {
+    position: absolute;
+    top: calc(821 * 100% / 1065);
+    right: calc(46 * 100% / 1440);
+
+    
+    transform: translate(30%, -30%);
   }
 }
