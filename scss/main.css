@@ -4,6 +4,7 @@ html,
 body {
   font-family: var(--font-main);
   color: var(--text-color);
+  padding: 0 0 10vh;
 }
 html .container,
 body .container {
@@ -389,4 +390,201 @@ legend {
 }
 .info_hint .info_hint_radio_fake__gray {
   background: var(--ui-gray);
+}
+
+.benefits {
+  padding: 120px 0;
+}
+.benefits .benefits_grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.benefits .benefits_grid .benefits_title {
+  font-size: 42px;
+  font-weight: 700;
+  max-width: 260px;
+}
+
+.benefit_item .benefit_item_title {
+  margin: 0 0 20px;
+  font-size: 24px;
+  font-weight: 700;
+}
+.benefit_item .benefit_item_text {
+  margin: 0 0 14px;
+  font-size: 16px;
+  line-height: 1.85;
+  opacity: 0.8;
+}
+
+.products {
+  padding: 50px 0;
+  background: #f7f7f7;
+}
+.products .products_title {
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+}
+.products .products_tabs {
+  margin: 0 0 80px;
+  text-align: center;
+}
+.products .products_slider {
+  margin: 0 0 60px;
+}
+.products .products_link {
+  text-align: center;
+}
+
+.read_more {
+  display: inline-flex;
+  gap: 13px;
+  align-items: center;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.85;
+}
+.read_more::after {
+  content: url("../../../icons/icon_arrow_right.svg");
+  height: 24px;
+}
+.read_more__xl {
+  font-size: 18px;
+}
+
+.teb_controls {
+  display: inline-flex;
+  padding: 6px;
+  align-items: center;
+  border-radius: 44px;
+  background-color: #eee;
+}
+.teb_controls .tab_controls_btn {
+  height: 45px;
+  padding: 4px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 32px;
+  color: rgba(31, 31, 31, 0.8);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.85;
+  transition: background-color 0.2s ease-in-out;
+}
+.teb_controls .tab_controls_btn:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.teb_controls .tab_controls_btn__active {
+  background-color: #fff;
+}
+
+.product_card {
+  position: relative;
+  max-width: 500px;
+  font-family: var(--font-cards);
+}
+.product_card .product_card_link {
+  position: absolute;
+  inset: 0;
+}
+.product_card .product_card_photo {
+  margin: 50px 0 0;
+  height: 240px;
+  background-color: #fff;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+}
+.product_card .product_card_photo .product_card_img {
+  margin: -50px 0 0;
+}
+.product_card .product_card_desc {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 202px;
+  padding: 14px 22px 28px;
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+}
+.product_card .product_card_desc .product_card_category {
+  position: relative;
+  z-index: 10;
+  color: var(--text-muted);
+  font-size: 16px;
+}
+.product_card .product_card_desc .product_card_title {
+  color: var(--text-card-dark-blue);
+  font-size: 20px;
+  font-weight: 600;
+}
+.product_card .product_card_desc .card_rating {
+  display: flex;
+  gap: 3px;
+}
+.product_card .product_card_desc .product_card_footer {
+  margin: auto 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product_card .product_card_desc .product_card_footer .product_card_price {
+  display: flex;
+  align-items: flex-start;
+  gap: 3px;
+  color: var(--text-card-dark-blue);
+  font-size: 20px;
+  font-weight: 600;
+}
+.product_card .product_card_desc .product_card_footer .product_card_price::before {
+  content: attr(data-value);
+  font-size: 15px;
+}
+.product_card .product_card_desc .product_card_footer .product_card_btn {
+  position: relative;
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--ui-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  transition: 0.3s ease-in-out;
+}
+.product_card .product_card_desc .product_card_footer .product_card_btn:hover {
+  opacity: 0.8;
+}
+
+.slider {
+  position: relative;
+}
+.slider .slider_btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 7px 19px 0px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider .slider_btn__prev {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.slider .slider_btn__next {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  top: 50%;
+  transform: translate(50%, -50%);
 }/*# sourceMappingURL=main.css.map */
