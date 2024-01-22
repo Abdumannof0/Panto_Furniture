@@ -54,3 +54,26 @@ const swiper = new Swiper('.swiper', {
         prevEl: '#sliderPrev',
     },
 });
+
+// ! Tabs
+
+const tabBtns = document.querySelectorAll('[data-tab]')
+console.log(tabBtns);
+
+for (let btn of tabBtns) {
+    console.log(btn);
+
+    btn.addEventListener('click', function () {
+        console.log('click');
+        console.log(this);
+
+
+        // Turn Off active btn
+        for (let btn of tabBtns) {
+            btn.classList.remove('tab_controls_btn__active')
+        }
+
+        // Turn On active btn
+        this.classList.add('tab_controls_btn__active')
+    })
+}
