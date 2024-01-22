@@ -16,7 +16,9 @@
     <header class="header">
       <div class="container">
         <nav class="header_nav nav">
-          <a href="#" class="nav_logo">Panto</a>
+          <div class="nav_logo">
+            <a href="#" class="logo">Panto</a>
+          </div>
           <!-- ! -->
           <ul class="nav_list">
             <li class="nav_list_item">
@@ -230,12 +232,10 @@
         <div class="products_tabs">
           <!--  -->
           <div class="teb_controls">
-            <button class="tab_controls_btn tab_controls_btn__active">
-              Chair
-            </button>
-            <button class="tab_controls_btn">Beds</button>
-            <button class="tab_controls_btn">Sofa</button>
-            <button class="tab_controls_btn">Lamp</button>
+            <button data-tab="chair" class="tab_controls_btn">Chair</button>
+            <button data-tab="beds" class="tab_controls_btn">Beds</button>
+            <button data-tab="sofa" class="tab_controls_btn">Sofa</button>
+            <button data-tab="lamp" class="tab_controls_btn">Lamp</button>
           </div>
           <!--  -->
         </div>
@@ -246,7 +246,10 @@
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper">
                 <!-- Slides -->
-                <article class="product_card swiper-slide">
+                <article
+                  data-tab-value="chair"
+                  class="product_card swiper-slide"
+                >
                   <a href="#product_page" class="product_card_link"></a>
                   <div class="product_card_photo">
                     <img
@@ -282,9 +285,10 @@
                   </div>
                 </article>
 
-                <!-- ! 1 -->
-
-                <article class="product_card swiper-slide">
+                <article
+                  data-tab-value="bads"
+                  class="product_card swiper-slide"
+                >
                   <a href="#product_page" class="product_card_link"></a>
                   <div class="product_card_photo">
                     <img
@@ -295,7 +299,7 @@
                     />
                   </div>
                   <div class="product_card_desc">
-                    <a href="#category" class="product_card_category">Chair</a>
+                    <a href="#category" class="product_card_category">Beds</a>
                     <h3 class="product_card_title">Baltsar Chair</h3>
 
                     <div class="card_rating">
@@ -320,9 +324,88 @@
                   </div>
                 </article>
 
-                <!-- ! 2 -->
+                <article
+                  data-tab-value="sofa"
+                  class="product_card swiper-slide"
+                >
+                  <a href="#product_page" class="product_card_link"></a>
+                  <div class="product_card_photo">
+                    <img
+                      class="product_card_img"
+                      srcset="./images/chair-01@2x.png 2x"
+                      src="./images/chair-01.png"
+                      alt="Image"
+                    />
+                  </div>
+                  <div class="product_card_desc">
+                    <a href="#category" class="product_card_category">Sofa</a>
+                    <h3 class="product_card_title">Sakarias Armchair</h3>
 
-                <article class="product_card swiper-slide">
+                    <div class="card_rating">
+                      <img src="./icons/Star_setActive.svg" alt="Star" />
+                      <img src="./icons/Star_setActive.svg" alt="Star" />
+                      <img src="./icons/Star_setActive.svg" alt="Star" />
+                      <img src="./icons/Star_setActive.svg" alt="Star" />
+                      <img src="./icons/Star_active.svg" alt="Star" />
+                    </div>
+
+                    <div class="product_card_footer">
+                      <div class="product_card_price" data-value="$">392</div>
+                      <button class="product_card_btn">
+                        Add to card
+                        <img
+                          class="product_card_btn_img"
+                          src="./icons/bx_bx-plus.png"
+                          alt="Add to card"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  data-tab-value="lamp"
+                  class="product_card swiper-slide"
+                >
+                  <a href="#product_page" class="product_card_link"></a>
+                  <div class="product_card_photo">
+                    <img
+                      class="product_card_img"
+                      srcset="./images/chair-02@2x.png 2x"
+                      src="./images/chair-02.png"
+                      alt="Image"
+                    />
+                  </div>
+                  <div class="product_card_desc">
+                    <a href="#category" class="product_card_category">Lamp</a>
+                    <h3 class="product_card_title">Baltsar Chair</h3>
+
+                    <div class="card_rating">
+                      <img src="./icons/Star_setActive.svg" alt="Star" />
+                      <img src="./icons/Star_setActive.svg" alt="Star" />
+                      <img src="./icons/Star_setActive.svg" alt="Star" />
+                      <img src="./icons/Star_setActive.svg" alt="Star" />
+                      <img src="./icons/Star_active.svg" alt="Star" />
+                    </div>
+
+                    <div class="product_card_footer">
+                      <div class="product_card_price" data-value="$">299</div>
+                      <button class="product_card_btn">
+                        Add to card
+                        <img
+                          class="product_card_btn_img"
+                          src="./icons/bx_bx-plus.png"
+                          alt="Add to card"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                </article>
+
+                <article
+                  data-tab-value="lamp"
+                  class="product_card swiper-slide"
+                >
                   <a href="#product_page" class="product_card_link"></a>
                   <div class="product_card_photo">
                     <img
@@ -333,7 +416,7 @@
                     />
                   </div>
                   <div class="product_card_desc">
-                    <a href="#category" class="product_card_category">Chair</a>
+                    <a href="#category" class="product_card_category">Lamp</a>
                     <h3 class="product_card_title">Anjay Chair</h3>
 
                     <div class="card_rating">
@@ -358,9 +441,10 @@
                   </div>
                 </article>
 
-                <!-- ! 3 -->
-
-                <article class="product_card swiper-slide">
+                <article
+                  data-tab-value="chair"
+                  class="product_card swiper-slide"
+                >
                   <a href="#product_page" class="product_card_link"></a>
                   <div class="product_card_photo">
                     <img
@@ -395,9 +479,11 @@
                     </div>
                   </div>
                 </article>
-                <!-- ! 4 -->
 
-                <article class="product_card swiper-slide">
+                <article
+                  data-tab-value="beds"
+                  class="product_card swiper-slide"
+                >
                   <a href="#product_page" class="product_card_link"></a>
                   <div class="product_card_photo">
                     <img
@@ -408,7 +494,7 @@
                     />
                   </div>
                   <div class="product_card_desc">
-                    <a href="#category" class="product_card_category">Chair</a>
+                    <a href="#category" class="product_card_category">Beds</a>
                     <h3 class="product_card_title">Sakarias Armchair</h3>
 
                     <div class="card_rating">
@@ -433,9 +519,10 @@
                   </div>
                 </article>
 
-                <!-- ! 5 -->
-
-                <article class="product_card swiper-slide">
+                <article
+                  data-tab-value="sofa"
+                  class="product_card swiper-slide"
+                >
                   <a href="#product_page" class="product_card_link"></a>
                   <div class="product_card_photo">
                     <img
@@ -446,7 +533,7 @@
                     />
                   </div>
                   <div class="product_card_desc">
-                    <a href="#category" class="product_card_category">Chair</a>
+                    <a href="#category" class="product_card_category">Sofa</a>
                     <h3 class="product_card_title">Baltsar Chair</h3>
 
                     <div class="card_rating">
@@ -471,9 +558,10 @@
                   </div>
                 </article>
 
-                <!-- ! 6 -->
-
-                <article class="product_card swiper-slide">
+                <article
+                  data-tab-value="lamp"
+                  class="product_card swiper-slide"
+                >
                   <a href="#product_page" class="product_card_link"></a>
                   <div class="product_card_photo">
                     <img
@@ -484,7 +572,7 @@
                     />
                   </div>
                   <div class="product_card_desc">
-                    <a href="#category" class="product_card_category">Chair</a>
+                    <a href="#category" class="product_card_category">Lamp</a>
                     <h3 class="product_card_title">Anjay Chair</h3>
 
                     <div class="card_rating">
@@ -509,9 +597,10 @@
                   </div>
                 </article>
 
-                <!-- ! 7 -->
-
-                <article class="product_card swiper-slide">
+                <article
+                  data-tab-value="chair"
+                  class="product_card swiper-slide"
+                >
                   <a href="#product_page" class="product_card_link"></a>
                   <div class="product_card_photo">
                     <img
@@ -565,7 +654,49 @@
         </div>
       </div>
     </section>
-
     <!-- !SECTION_PRODUCTS -->
+
+    <footer class="footer">
+      <div class="container container_small">
+        <div class="footer_grid">
+          <div class="footer_desc">
+            <div class="footer_logo logo">Panto</div>
+            <p>
+              The advantage of hiring a workspace with us is that givees you
+              comfortable service and all-around facilities.
+            </p>
+          </div>
+
+          <nav class="footer_nav footer_nav_services">
+            <h3 class="footer_nav_title">Services</h3>
+            <ul class="footer_list">
+              <li class="footer_list_item"><a href="#!">Email Marketing</a></li>
+              <li class="footer_list_item"><a href="#!">Campaigns</a></li>
+              <li class="footer_list_item"><a href="#!">Branding</a></li>
+            </ul>
+          </nav>
+          <!--  -->
+          <nav class="footer_nav">
+            <h3 class="footer_nav_title">Furniture</h3>
+            <ul class="footer_list">
+              <li class="footer_list_item"><a href="#!">Beds</a></li>
+              <li class="footer_list_item"><a href="#!">Chair</a></li>
+              <li class="footer_list_item"><a href="#!">All</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- ! Footer grid -->
+
+        <div class="footer_row">
+          <div class="footer_copyright">Copyright © 2023</div>
+
+          <div class="footer_links">
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+        <!-- ! Footer Row -->
+      </div>
+    </footer>
   </body>
 </html>
