@@ -24,6 +24,10 @@
 
     &__active {
       background-color: #fff;
+
+      &:hover {
+        background-color: #fff;
+      }
     }
   }
 }
