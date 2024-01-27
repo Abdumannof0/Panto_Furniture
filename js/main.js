@@ -58,14 +58,12 @@ const swiper = new Swiper('.swiper', {
 // ! Tabs
 
 const tabBtns = document.querySelectorAll('[data-tab]')
-console.log(tabBtns);
+const tabsProducts = document.querySelectorAll('[data-tab-value]')
+
 
 for (let btn of tabBtns) {
-    console.log(btn);
 
     btn.addEventListener('click', function () {
-        console.log('click');
-        console.log(this);
 
 
         // Turn Off active btn
@@ -75,5 +73,25 @@ for (let btn of tabBtns) {
 
         // Turn On active btn
         this.classList.add('tab_controls_btn__active')
+
+        console.log(this.dataset.tab);
+
+        for (let product of tabsProducts) {
+
+            if (this.dataset.tab === 'all') {
+                product.classList.remove('none')
+            } else {
+                if (product.dataset.tabValue === this.dataset.tab) {
+                    product.classList.remove('none')
+
+                } else {
+
+                    product.classList.add('none')
+                }
+            }
+        }
+
+        swiper.update()
+
     })
 }

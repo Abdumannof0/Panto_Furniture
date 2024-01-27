@@ -1,4 +1,4 @@
-@import "./../fonts/Gilroy/stylesheet.css";
+// @import "./../fonts/Gilroy/stylesheet.css";
 
 // Base
 @import "./base/base";
@@ -8,6 +8,7 @@
 // Blocks
 @import "./base/blocks/header";
 @import "./base/blocks/nav";
+@import "./base/blocks/mobileSubNav";
 @import "./base/blocks/logo";
 @import "./base/blocks/navList";
 @import "./base/blocks/cart";
@@ -22,3 +23,4 @@
 @import "./base/blocks/productCard";
 @import "./base/blocks/slider";
 @import "./base/blocks/footer";
+@import "./base/blocks/subNav";
